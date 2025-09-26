@@ -25,7 +25,7 @@ function enterWebsite() {
   const name = document.getElementById("username").value;
   if (name.trim() !== "") {
     localStorage.setItem("visitorName", name);
-    window.location.href = "home.html"; // pindah ke halaman home
+    window.location.href = "/pages/home.html"; // pindah ke halaman home
   } else {
     alert("Please enter your name first.");
   }
