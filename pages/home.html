@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home - My Website</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+
+<body>
+  <!-- Navbar (inject dari components/navbar.html via JS) -->
+  <header id="navbar-container"></header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-container">
+        <h1>
+          Hi <span id="welcome-name"></span>, Welcome To <br />
+          <span class="highlight">Our Website</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          Discover innovation and excellence through our professional services and creative solutions
+        </p>
+
+        <div class="hero-buttons">
+          <a href="profile.html" class="btn primary">Get Started</a>
+          <a href="portfolio.html" class="btn secondary">View Portfolio</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Headquarter Section -->
+    <section class="headquarter">
+      <div class="section-header">
+        <h2>Our Global Presence</h2>
+        <p>Strategically located across Indonesia's major cities to serve you better</p>
+      </div>
+
+      <div class="headquarter-grid">
+        <article class="headquarter-card">
+          <div class="icon-box">🏢</div>
+          <h3>Jakarta</h3>
+          <p>Capital Hub</p>
+        </article>
+        <article class="headquarter-card">
+          <div class="icon-box">🏔️</div>
+          <h3>Bandung</h3>
+          <p>Creative Center</p>
+        </article>
+        <article class="headquarter-card">
+          <div class="icon-box">🌊</div>
+          <h3>Surabaya</h3>
+          <p>Innovation Port</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact">
+      <div class="section-header">
+        <h2>Let's Connect</h2>
+        <p>Ready to start your next project? We'd love to hear from you.</p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Contact Form -->
+        <div class="contact-form">
+          <form id="contactForm">
+            <input type="text" id="name" placeholder="Your Name" required />
+            <p id="nameError" class="error-message">Name must be at least 3 characters.</p>
+
+            <input type="email" id="email" placeholder="Your Email" required />
+            <p id="emailError" class="error-message">Please enter a valid email.</p>
+
+            <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+            <p id="messageError" class="error-message">Message must be at least 10 characters.</p>
+
+            <button type="submit" class="btn primary">Send Message</button>
+          </form>
+        </div>
+
+        <!-- Information Panel -->
+        <aside class="contact-info">
+          <h3>Live Information</h3>
+          <ul>
+            <li><strong>Time:</strong> <span id="current-time"></span></li>
+            <li><strong>Name:</strong> <span id="welcome-name-info"></span></li>
+            <li><strong>Born:</strong> 01/11/1995</li>
+            <li><strong>Gender:</strong> Male</li>
+            <li><strong>Goal:</strong> Learning to create a website</li>
+          </ul>
+
+          <h4>Quick Navigation</h4>
+          <nav class="quick-nav">
+            <a href="profile.html" class="btn outline">👥 Learn About Us</a>
+            <a href="portfolio.html" class="btn outline">💼 View Our Work</a>
+            <a href="message.html" class="btn outline">📞 Contact Details</a>
+          </nav>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="logo-box">😊</div>
+      <h3>My Website</h3>
+      <p>Crafting exceptional digital experiences with passion and precision</p>
+    </div>
+    <p class="copyright">
+      © 2024 Created By <span class="highlight">Revo.id</span> | All rights reserved
+    </p>
+  </footer>
+
+  <div class="popup" id="successPopup">
+    <div class="popup-content">
+      <h3>Message Sent Successfully!</h3>
+      <p>Thank you for reaching out. We’ll get back to you soon.</p>
+      <button onclick="closePopup()">OK</button>
+    </div>
+  </div>
+
+  <script src="/js/script.js"></script>
+</body>
+
+</html>
